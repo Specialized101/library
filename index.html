@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,35 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
-        <h1>My Books</h1>
-        <div class="books">
-            
+        <div class="title">
+            <h1>My Books</h1>
+            <button type="button" id="showDialogBtn"></button>
         </div>
+        <div class="books">
+
+        </div>
+        <dialog>
+            <form action="" method="post">
+                <button id="closeFormBtn" autofocus>Close</button>
+                <fieldset>
+                    <legend>Create a new Book</legend>
+                    <label for="newTitle">Title</label>
+                    <input type="text" name="newTitle" id="newTitle">
+                    <label for="newAuthor">Author</label>
+                    <input type="text" name="newAuthor" id="newAuthor">
+                    <label for="newNumOfPages">Number of pages</label>
+                    <input type="number" min="1" name="newNumOfPages" id="newNumOfPages">
+                    <label for="newRead">Already read ? </label>
+                    <input type="checkbox" name="newRead" id="newRead">
+                </fieldset>
+                <button id="createBtn" type="submit">Create</button>
+            </form>
+        </dialog>
     </div>
+    
 </body>
+
 </html>
