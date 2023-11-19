@@ -1,14 +1,18 @@
-const myLibrary = []
+class Book {
+    constructor(title, author, numOfPages, isRead){
+        this.title = title
+        this.author = author
+        this.numOfPages = numOfPages
+        this.isRead = isRead
+    }
 
-function Book (title, author, numOfPages, isRead) {
-    this.title = title
-    this.author = author
-    this.numOfPages = numOfPages
-    this.isRead = isRead
-    this.info = () => {
-        return `${title} by ${author}, ${numOfPages} pages, ${this.isRead ? 'already read' : 'not read yet'}`
+    info () {
+        return `${title} by ${author}, ${numOfPages} pages, ${this.isRead ? 'already read' : 'not read yet'}`     
     }
 }
+
+const myLibrary = []
+
 
 Book.prototype.toggleRead = function () {
     this.isRead = this.isRead ? false : true
