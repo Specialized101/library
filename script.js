@@ -107,6 +107,11 @@ function clearForm() {
 }
 
 createButton.addEventListener('click', () => {
+    if (!form.checkValidity()){
+        alert('Please fill the required fields')
+        return
+    }
+
     let newBook = new Book()
     newBook.title = document.querySelector('#newTitle').value
     newBook.author = document.querySelector('#newAuthor').value

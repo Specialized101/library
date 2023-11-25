@@ -24,11 +24,11 @@
                 <fieldset>
                     <legend>Create a new Book</legend>
                     <label for="newTitle">Title</label>
-                    <input type="text" name="newTitle" id="newTitle">
+                    <input type="text" name="newTitle" id="newTitle" required>
                     <label for="newAuthor">Author</label>
-                    <input type="text" name="newAuthor" id="newAuthor">
+                    <input type="text" name="newAuthor" id="newAuthor" required>
                     <label for="newNumOfPages">Number of pages</label>
-                    <input type="number" min="1" name="newNumOfPages" id="newNumOfPages">
+                    <input type="number" min="1" max="10000" name="newNumOfPages" id="newNumOfPages" required>
                     <label for="newRead">Already read ? </label>
                     <input type="checkbox" name="newRead" id="newRead">
                 </fieldset>
